@@ -1,0 +1,8 @@
+*.ipynb_checkpoints
+*.png
+./code/mediapipe_hands/
+*.mp4
+*.jpg
+*.pt
+datasets/guitar_dataset_v2/
+datasets/video/

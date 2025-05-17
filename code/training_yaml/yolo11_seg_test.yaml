@@ -1,0 +1,26 @@
+path: ../../../guitar_segmentation/datasets/guitar_dataset_v2/ # dataset root dir
+train: train/images # train images (relative to 'path') 4 images
+val: test/images # val images (relative to 'path') 4 images
+
+# Classes
+names:
+  0: Hand
+  1: Zone1
+  2: Zone10
+  3: Zone11
+  4: Zone12
+  5: Zone2
+  6: Zone3
+  7: Zone4
+  8: Zone5
+  9: Zone6
+  10: Zone7
+  11: Zone8
+  12: Zone9
+  13: fretboard
+  14: string1E
+  15: string2A
+  16: string3D
+  17: string4G
+  18: string5B
+  19: string6E
