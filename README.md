@@ -24,8 +24,11 @@ If you are transcribing with a video format, The output video will be stored in 
 
 **Training**
 
-Classes have to be numbered from 1 to 12 (frets) and 14 to 19 (strings). Class 0 and 13 are hand and fretboard respectively. The YOLOv11n yaml files are in `code/training_yaml`. When training, make sure 2 models are trained, one fore frets and one for string classes. The weights will be saved in the aforementioned weight locations.
+Classes have to be numbered from 1 to 12 (frets) and 14 to 19 (strings). Class 0 and 13 are hand and fretboard respectively. The YOLOv11n yaml files are in `code/training_yaml`. When training, make sure 2 models are trained, one fore frets and one for string classes. Set the `--yolo_class_label_list` to [1,2,...,12] for frets and [14,15,...,19] for strings. The weights will be saved in the `output folder`.
 
 To train the model, cd to `code` and run `python train.py --model_name [model name]`. Additional parameters can be accesed via the help menu.
+
+**Prediction**
+When predicting on the demo, modify the `predict.py` file and change the default `path_to_weights` variable to the path of your saved weights (see the lines with comments with #change this). YOLO takes in 2 paths in a list. Then run the demo again.
 
 *Done by: Zhen Hao*

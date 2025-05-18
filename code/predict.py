@@ -22,7 +22,7 @@ class Predictor:
     def get_model(self):
         if self.model_name.lower() == 'yolo':
             if self.path_to_weights == 'default':
-                self.path_to_weights_ = ["./runs/segment/train12/weights/best.pt","./runs/segment/train11/weights/best.pt"]
+                self.path_to_weights_ = ["./runs/segment/train12/weights/best.pt","./runs/segment/train11/weights/best.pt"] #change this
                 
             else:
                 self.path_to_weights_ = self.path_to_weights
@@ -32,7 +32,7 @@ class Predictor:
     
         elif self.model_name.lower() == 'vit_maskrcnn':
             if self.path_to_weights == 'default':
-                self.path_to_weights_ = './output/ViT_21_class_2025_04_22_16_07_33/model_150.pt'
+                self.path_to_weights_ = './output/vit_maskrcnn/model_150.pt' #change this
             else:
                 self.path_to_weights_ = self.path_to_weights
             self.class_names = maskRCNN_class_names
@@ -43,7 +43,7 @@ class Predictor:
             
         elif self.model_name.lower() == 'resnet_maskrcnn':
             if self.path_to_weights == 'default':
-                self.path_to_weights_ = './output/MaskRCNN_2025_04_22_11_10_04/model_50.pt'
+                self.path_to_weights_ = './output/resnet_maskrcnn/model_50.pt' #change this
             else:
                 self.path_to_weights_ = self.path_to_weights
             self.class_names = maskRCNN_class_names

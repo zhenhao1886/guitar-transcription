@@ -181,7 +181,7 @@ if __name__ == "__main__":
             )
 
     
-        model, path_to_weights = train(args.model_name, model, train_dataloader, val_dataloader, optimizer, lr_scheduler, epochs, scaler, batch_size = args.batch_size, device = args.device, save_weights_dir = f'./{dir_name}/{datetime_string}')
+        model, path_to_weights = train(args.model_name, model, train_dataloader, val_dataloader, optimizer, lr_scheduler, epochs, scaler, batch_size = args.batch_size, device = args.device, save_weights_dir = f'./output/{dir_name}/{datetime_string}')
         print(f'Model weights saved to {path_to_weights}')
         evaluator = Evaluator(model)
         evaluator.evaluate(test_dataloader)
